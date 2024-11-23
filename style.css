@@ -1,0 +1,126 @@
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cuerpo {
+    width: 100%;
+    display: flex;
+  }
+
+  .titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8em;
+    color: rgb(177, 180, 180);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55em;
+    margin: 0 auto;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .saludo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    padding-left: 20px;
+    box-sizing: border-box;
+    
+    
+  }
+  .titulo2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .mensaje {
+    max-width: 300px;
+    padding: 20px;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-style: italic;
+    margin-bottom: 5em;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(59, 59, 80, 0.418);
+    white-space: normal; 
+    word-wrap: break-word;
+  }
+  
+
+  .contain {
+    overflow: hidden; 
+  }
+  
+  .contain img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    border: 1px solid gray;
+    filter: sepia(2);
+  }
+
+  .contain img:hover {
+    width: 210px;
+    height: 220px;
+    filter: sepia(0);
+  }
+
+  .contain img:hover  + .saludo {
+    background-color: red; /* Aparece al hacer hover */
+    pointer-events: all; /* Permite interactuar con él */
+  }
+  
+  .contain:nth-child(2)::before{
+		content:"";
+		width: 200px;
+		display:inline-block;
+	}
+  .contain:nth-child(1)::before{
+		content:"";
+		width: 0px;
+		display:inline-block;
+	}
+  .contain:nth-child(1)::before{
+		content:"";
+		width: 100px;
+		display:inline-block;
+	}
+  .contain:nth-child(7)::before{
+		content:"";
+		width: 100px;
+		display:inline-block;
+	}
+  .contain:last-child::before{
+		content:"";
+		width: 310px;
+		display:inline-block;
+	} 
+  #content {
+    display: none;
+  }
+
+  @media (min-width: 1250px) {
+   
+    .saludo {
+      padding-left: 70px;
+    }
+    #content {
+      display: flex;
+    }
+  }
